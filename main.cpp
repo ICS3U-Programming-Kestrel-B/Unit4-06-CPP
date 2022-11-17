@@ -1,7 +1,7 @@
 // Copyright (c) 2022 KestrelBryce All rights reserved
 //
 // Created by: KestrelBryce
-// Created on: Nov 11, 2022
+// Created on: Nov 16, 2022
 // This program prints all possible
 // RGB codes
 
@@ -15,6 +15,8 @@ int main() {
     int green = 0;
     int blue = 0;
     std::string start;
+
+
 
     // Introductory paragraph
     std::cout << "This program prints all possible\n";
@@ -31,7 +33,8 @@ int main() {
         // Blue statement
         if (blue < 255) {
             // Printing colours
-            std::cout << red << " " << green << " " << blue;
+            printf("\033[1;38;2;%i;%i;%imRGB(%i, %i, %i)" , red, green, blue);
+            std::cout << red << " " << green << " " << blue << '\n';
             // Incrementing counter
             blue = blue + 1;
         } else if (green < 255) {
@@ -41,7 +44,8 @@ int main() {
                 green = green + 1;
             }
             // Printing colours
-            std::cout << red << " " << green << " " << blue;
+            printf("\033[1;38;2;%i;%i;%imRGB(%i, %i, %i)" , red, green, blue);
+            std::cout << red << " " << green << " " << blue << '\n';
         } else if (red < 255) {
             if (green == 255) {
                 // Updating counters
@@ -49,10 +53,12 @@ int main() {
                 red = red + 1;
             }
             // Printing colours
-            std::cout << red << " " << green << " " << blue;
+            printf("\033[1;38;2;%i;%i;%imRGB(%i, %i, %i)" , red, green, blue);
+            std::cout << red << " " << green << " " << blue << '\n';
         } else {
             // Printing colours
-            std::cout << red << " " << green << " " << blue;
+            printf("\033[1;38;2;%i;%i;%imRGB(%i, %i, %i)" , red, green, blue);
+            std::cout << red << " " << green << " " << blue << '\n';
             // Ending remark
             std::cout << "This is the end.";
             // Break statement

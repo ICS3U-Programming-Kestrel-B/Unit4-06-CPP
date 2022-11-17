@@ -1,6 +1,8 @@
 { pkgs }: {
 	deps = [
-		pkgs.clang_12
+		pkgs.cpplint
+  pkgs.python39Packages.black
+  pkgs.clang_12
 		pkgs.ccls
 		pkgs.gdb
 		pkgs.gnumake
